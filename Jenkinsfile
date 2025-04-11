@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE = 'SonarQube' // Must match the name from Jenkins config
+        SONARQUBE = 'MySonarQube' // Must match the name from Jenkins config
     }
 
     stages {
