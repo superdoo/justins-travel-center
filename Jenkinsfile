@@ -6,12 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Clone repo') {
-            steps {
-                git url: '', branch: 'main'
-            }
-        }
-
+       
         stage('Prepare Python') {
             steps {
                 sh '''
