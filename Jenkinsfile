@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone repo') {
             steps {
-                git url: 'https://github.com/superdoo/justins-travel-center.git', branch: 'main'
+                git url: '', branch: 'main'
             }
         }
 
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh '''
                     python3 -m venv venv
-                    source venv/bin/activate
+                    . venv/bin/activate
                     pip install --upgrade pip
                 '''
             }
