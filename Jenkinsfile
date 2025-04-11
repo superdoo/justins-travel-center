@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE = 'MySonarQube' // Must match the name from Jenkins config
+        SONARQUBE = 'MySonarQube' // This must match your SonarQube server name in Jenkins config
+        PATH = "/opt/sonar-scanner/bin:${PATH}" // Add this if sonar-scanner is not already in Jenkins' PATH
     }
 
     stages {
-       
         stage('Prepare Python') {
             steps {
                 sh '''
